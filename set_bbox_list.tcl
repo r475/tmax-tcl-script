@@ -7,7 +7,7 @@ proc set_bbox_list {args} {
 	set file_handle [open $p_args(bbox_list_file) r]
 	while { [gets $file_handle each_line] != -1} {
 		if { [regexp # $each_line]!=1 } {
-			## If line contains "#", it's comment line, drop it.`
+			## If line contains "#", it's comment line, drop it.
 			lappend bmodule_list $each_line 
 	    }
 	}
